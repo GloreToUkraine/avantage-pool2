@@ -81,12 +81,16 @@
 
     <section class="contact" id="contact">
       <div class="contact-copy"><p class="eyebrow light">Почнемо з розмови</p><h2>Розкажіть про<br>ваш майбутній<br><em>басейн</em></h2><p>Залиште контакти — ми зателефонуємо, уточнимо задачу та запропонуємо наступний крок.</p></div>
-      <form class="form" action="mailto:avantagepool@gmail.com" method="post" enctype="text/plain">
-        <label>Ваше ім’я<input name="name" required autocomplete="name" placeholder="Ім’я" /></label>
-        <label>Номер телефону<input name="phone" required autocomplete="tel" inputmode="tel" placeholder="+38 (___) ___-__-__" /></label>
-        <label>Тип об’єкта<select name="project"><option>Приватний басейн</option><option>Готель / SPA</option><option>Громадський об’єкт</option><option>Сервіс / модернізація</option></select></label>
-        <label>Коротко про задачу<textarea name="message" rows="3" placeholder="Місто, розміри, бажані терміни"></textarea></label>
+      <form class="form" id="contact-form" action="https://formsubmit.co/ajax/avantagepool@gmail.com" method="post">
+        <input type="hidden" name="_subject" value="Нова заявка з сайту Avantage Pool" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <label>Ваше ім’я<input name="Ім’я" required autocomplete="name" placeholder="Ім’я" /></label>
+        <label>Номер телефону<input name="Телефон" required autocomplete="tel" inputmode="tel" placeholder="+38 (___) ___-__-__" /></label>
+        <label>Тип об’єкта<select name="Тип об’єкта"><option>Приватний басейн</option><option>Готель / SPA</option><option>Громадський об’єкт</option><option>Сервіс / модернізація</option></select></label>
+        <label>Коротко про задачу<textarea name="Повідомлення" rows="3" placeholder="Місто, розміри, бажані терміни"></textarea></label>
         <button type="submit">Надіслати запит <span>↗</span></button>
+        <p class="form-status" role="status" aria-live="polite"></p>
         <small>Надсилаючи форму, ви погоджуєтесь на обробку контактних даних.</small>
       </form>
     </section>
